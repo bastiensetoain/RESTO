@@ -1,0 +1,23 @@
+
+{% extends'base.twig' %}
+
+
+{% block content %}
+
+<main>
+    <h1>{{ post.title }}</h1>
+
+
+    <p>{{ post.content }}</p>
+    
+    <h4>Commentaires:</h4>
+	{% for comment in post.comments %}
+		<div class="comment-{{comment.ID}} comment-order-{{loop.index}}">
+			<p>{{comment.author.name}} à écrit:</p>
+			<p>{{comment.content}}</p>
+		</div>
+	{% endfor %}
+    
+</main>
+
+{% endblock %}

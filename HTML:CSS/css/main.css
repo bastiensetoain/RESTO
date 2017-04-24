@@ -271,6 +271,14 @@ main .articles .article {
   position: absolute;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
 .blue {
   background-color: blue;
 }

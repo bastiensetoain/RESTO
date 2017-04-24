@@ -1,0 +1,191 @@
+/*------------------------------------------------------------------/*
+Theme Name: RESTO
+Description: A Responsive WordPress Theme for restaurant.
+Author URI: http://bastiensetoain.fr/
+Author: Bastien Setoain
+Version: 1.0
+*/
+
+
+
+
+body{
+    margin: 0;
+    font-family: 'Catamaran';
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 5em;
+}
+
+section{
+    margin: 8em 0;
+}
+
+.plats{
+    display: flex;
+    width: 80%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.plats .plat{
+    width: 50%;
+}
+
+.featured{
+    display: flex;
+    width: 70%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.featured .plat{
+    width: 25%;
+}
+h2{
+    text-align: center;
+}
+
+.articles{
+    display: flex;
+    flex-flow: row wrap;
+}
+.article img{
+    width: 10em;
+}
+/*===============================
+=          MEDIA QUERIES
+===============================*/
+
+@media (max-width: 400px) {
+    
+    main{
+        flex-flow: column wrap;
+        width: 80%;
+        margin: auto;
+        padding: 4em 0;
+    }
+    .head{
+        display: none;
+    }
+    .pre_page{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0 0 4em;
+    }
+    .pre_page h1{
+        font-size: 2em;
+    }
+    .first_line{
+        flex-direction: column; 
+        align-items: center;
+        background: none;
+    }
+    .first_line .projet {
+        margin: 2em 0;
+    }
+    .second_line{
+        flex-direction: column;
+        align-items: center;
+        background: none;
+    }
+    .second_line .projet{
+        margin: 2em 0;    
+    }
+    
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    nav{
+        display: flex;
+        transform: translateX(-100%);
+        transition: .2s;
+    }
+    nav a{
+        transform: translateX(-100%);
+        transition: .2s;
+        color: #B1140D;
+    }
+    
+    [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav  {
+      transform: translateX(0);
+    }
+    .mobilenav{
+        visibility: visible;
+        display: flex;
+    }
+    
+    
+        .mobilenav .logo{
+            width: 3em;
+            margin: .6em;
+            fill: inherit;
+        }
+    .homeimg{
+        width: 100%;
+    }
+    header{
+        display: none;
+    }
+    .projet::before, .projet::after{
+        white-space: nowrap;
+    position: absolute;
+  bottom: 100%;
+    left: 50%;
+        top: inherit;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  pointer-events: none;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+    }
+    
+    .content_page {
+         margin: 0 ;
+    }
+    .content_page_text {
+        width: 100%;
+        white-space: inherit;
+        margin: 0;
+        column-count: inherit;
+        column-gap: inherit;
+    }
+    
+    
+    /*// ACTUALITES //*/
+    .cards{
+        padding: 0;
+        flex-flow: column;
+    }
+    .card{
+        width: 100%;
+        margin: 1em 0;
+    }
+    .single_content{
+        margin: 0;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .single_content p{
+        width: 100%;
+    }
+    .single_content *{
+        margin: 0;
+    }
+}
+
+/*===============================
+=       End of MEDIA QUERIES
+===============================*/
