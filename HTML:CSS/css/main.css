@@ -1,57 +1,284 @@
-/*------------------------------------------------------------------/*
-Website Name: 
-Website URI: 
-Description: 
-Author URI: http://bastiensetoain.fr/
-Author: Bastien Setoain
-Version: 1.0
-Last change:  10-01-2016
-*/
-
-body{
-    margin: 0;
+.flex {
+  display: flex;
 }
 
+.center {
+  justify-content: center;
+}
 
-/*===============================
-=          HEADER
-===============================*/
+.start {
+  justify-content: flex-start;
+}
 
+.around {
+  justify-content: space-around;
+}
 
+.between {
+  justify-content: space-between;
+}
 
-/*===============================
-=       End of HEADER
-===============================*/
+.center-h {
+  align-items: center;
+}
 
+.nowrap {
+  flex-wrap: nowrap;
+}
 
-/*===============================
-=          FOOTER
-===============================*/
+.wrap {
+  flex-wrap: wrap;
+}
 
+.column {
+  flex-direction: column;
+}
 
+.row {
+  flex-direction: row;
+}
 
-/*===============================
-=       End of FOOTER
-===============================*/
+.row {
+  display: flex;
+}
 
+.w-3 {
+  width: 33.333%;
+}
 
-/*===============================
-=          FONTS
-===============================*/
+.w100 {
+  width: 100%;
+}
 
+.w80 {
+  width: 80%;
+}
 
+.w70 {
+  width: 70%;
+}
 
-/*===============================
-=       End of FONTS
-===============================*/
+.w60 {
+  width: 60%;
+}
 
+.w40 {
+  width: 40%;
+}
 
-/*===============================
-=          MEDIA QUERIES
-===============================*/
+.w30 {
+  width: 30%;
+}
 
+.w27 {
+  width: 27%;
+}
 
+.w24 {
+  width: 24%;
+}
 
-/*===============================
-=       End of MEDIA QUERIES
-===============================*/
+.w20 {
+  width: 20%;
+}
+
+.w10 {
+  width: 10%;
+}
+
+.h200 {
+  height: 200px;
+}
+
+.h300 {
+  height: 300px;
+}
+
+.h400 {
+  height: 400px;
+}
+
+.h500 {
+  height: 500px;
+}
+
+.h600 {
+  height: 600px;
+}
+
+.h700 {
+  height: 700px;
+}
+
+.h800 {
+  height: 800px;
+}
+
+.h900 {
+  height: 900px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-2 {
+  margin: 2em;
+}
+
+.m-3 {
+  margin: 3em;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.p-2 {
+  padding: 2em;
+}
+
+.p-3 {
+  padding: 3em;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.grey-text {
+  color: #848789;
+}
+
+.lato-reg {
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+.lato-thin {
+  font-family: 'Lato';
+  font-weight: 300;
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.text-height {
+  line-height: 1.8em;
+}
+
+.work-p {
+  font-size: 14px;
+}
+
+.work-h2 {
+  font-size: 18px;
+}
+
+a, .titre {
+  text-decoration: none;
+}
+
+.space-L {
+  letter-spacing: 3px;
+}
+
+.space-M {
+  letter-spacing: 2px;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  padding: 15px 50px;
+}
+
+[id=devis] {
+  background-color: #282f35;
+}
+
+footer {
+  background-color: #f7f7f7;
+}
+
+.work_text-p {
+  padding: 0 60px;
+}
+
+.about-p {
+  padding: 115px 0;
+}
+
+.footer-p {
+  padding: 100px 0;
+}
+
+.devis-p {
+  padding: 60px 0;
+}
+
+.contact-p {
+  padding: 115px 0;
+}
+
+#devis button {
+  color: white;
+  border: 1px solid white;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+#devis button:hover {
+  color: #64c29e;
+  border: 1px solid #64c29e;
+}
+
+header {
+  background: center center/cover no-repeat url(../img/teahupoo.jpg);
+  height: 600px;
+}
+
+nav {
+  background-color: aquamarine;
+  height: 60px;
+  bottom: 0;
+}
+
+a, .titre {
+  color: red;
+}
+
+main .articles .article {
+  background-color: bisque;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.aquamarine {
+  background-color: aquamarine;
+}
+
+.beige {
+  background-color: beige;
+}

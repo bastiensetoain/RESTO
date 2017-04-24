@@ -1,0 +1,77 @@
+
+body{
+    margin: 0;
+}
+button{
+    padding: 15px 50px;
+}
+[id=devis]{
+    background-color: #282f35;
+}
+footer{
+    background-color: #f7f7f7;
+}
+
+.work_text-p{
+    padding: 0 60px;
+}
+.about-p{
+    padding: 115px 0;
+}
+.footer-p{
+    padding: 100px 0;
+}
+.devis-p{
+    padding: 60px 0;
+}
+.contact-p{
+    padding: 115px 0;
+}
+
+#devis button{
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0)
+}
+#devis button:hover{
+    color: #64c29e;
+    border: 1px solid #64c29e;
+}
+
+header{
+    background: center center / cover no-repeat url(../img/teahupoo.jpg);
+    height: 600px;
+}
+nav{
+    background-color: aquamarine;
+    height: 60px;
+    bottom: 0;
+}
+
+
+//EXTEND
+a{
+    color: red;
+}
+.titre{
+    @extend a;
+}
+
+//NESTING
+main{
+    .articles{
+        .article{
+            background-color: bisque;
+        }
+    }
+}
+
+
+//MIXIN
+@mixin flex {
+  -webkit-flex: $radius;
+     -moz-flex: $radius;
+      -ms-flex: $radius;
+          flex: $radius;
+}
