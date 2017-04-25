@@ -13,6 +13,15 @@ $context['plats'] = Timber::get_posts($plats_posts);
 
 
 
+$blog_posts = array(
+        'post_type' => 'post',
+        'posts_per_page' => 4
+);
+
+$context['articles'] = Timber::get_posts($blog_posts);
+
+
+
 $plats_posts_featured = array(
         'post_type' => 'plats_posts',
         'meta_query'	=> array(
@@ -34,3 +43,4 @@ $context['featured'] = Timber::get_posts($plats_posts_featured);
 Timber::render('index.twig', $context);
 
 //var_dump($context['logo']);
+

@@ -1,17 +1,17 @@
 <header>
 
 
-<img src="{{ logo.0 }}" alt="">
+    <a href="{{ site.url }}"><img src="{{ logo.0 }}" alt=""></a>
 
-<nav>
-    
-    {% for item in menu.get_items %}
-    
-        <a href="{{ item.get_link }}">{{ item.title }}</a>
-  
-    {% endfor %}
-    
-</nav>
+    <nav>
+
+        {% for item in menu.get_items %}
+
+            <a href="{{ item.get_link }}">{{ item.title }}</a>
+
+        {% endfor %}
+
+    </nav>
 
 
 </header>

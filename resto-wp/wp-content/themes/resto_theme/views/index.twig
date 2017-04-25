@@ -5,12 +5,20 @@
 
 <main>
  
-  <section class="slider">
+  <section style="background: center center / cover url({{ TimberPost(75).thumbnail }})" class="slider">
+     
+     {{ TimberPost(75).content }}
       
   </section>
   
+  <div class="container">
+  
+  
    <section class="dishes">
-        <h2>The Menu :</h2>
+        <h2><a href="{{ TimberPost(6).link }}">The Menu :</a></h2>
+        
+        
+        
         <div class="plats">
             {% for post in plats %}
                     <div class="plat">
@@ -24,42 +32,61 @@
         </div>
     </section>
     
-    <section class="rated_dishes">
+    <section class="featured_dishes">
         <h2>Meilleurs Plats</h2>
-        <div class="featured">
-            {% for post in featured %}
-                    <div class="plat">
-                        <h3>{{ post.title }}</h3>
+        
+        <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+                
+                    {% for post in featured %}
+                            <div class="swiper-slide featured">
+                               <img src="{{ post.thumbnail }}" alt="">
+                                <h3>{{ post.title }}</h3>
 
-                        <p>{{ post.content }}</p>
-                        <p>{{post.get_field('prix')}} €</p>
-                    </div>
-
-            {% endfor %}
+                                <p>{{ post.content }}</p>
+                                <p>{{post.get_field('prix')}} €</p>
+                            </div>
+                    {% endfor %}
+                
+            
+            
         </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
     </section>
+    
+      
     
     <section class="blog">
         <h2>Derniers Articles</h2>
         <div class="articles">
-            {% for post in posts %}
+            {% for post in articles %}
 
                    <div class="article">
-                    <h3>{{ post.title }}</h3>
+                    <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
                     <img src="{{ post.thumbnail }}">
                     </div>
 
 
             {% endfor %}
+            <a href="{{ TimberPost(72).link }}">VOIR PLUS</a>
         </div>
     </section>
     
     <section class="restos">
         <h2>Restaurants</h2>
         <div class="restaurants">
-            
+           <div class="json"></div>
+            <a href="{{ TimberPost(8).link }}">VOIR PLUS</a>
         </div>
     </section>
+    
+    </div>
     
 </main>
 
