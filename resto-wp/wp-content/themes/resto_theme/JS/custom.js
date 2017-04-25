@@ -5,25 +5,54 @@ jQuery(document).ready(function($){
     
     
     
-    $.getJSON( "http://localhost:8888/RESTO/resto-wp/wp-content/themes/resto_theme/resto-liste-restaurants.json", function( data ) {
+//    $.getJSON( "http://localhost:8888/RESTO/resto-wp/wp-content/themes/resto_theme/resto-liste-restaurants.json", function( data ) {
+//        
+//        console.log(data);
+//        
+//        
+//      var items = [];
+//        
+//        
+//      $.each( data, function( key, val ) {
+//        items.push( "<li id='" + key + "'>" + val + key  + "</li>" );
+////        var address = [key].address;
+////        console.log(address);
+//          "class": "my-new-list",
+//        html: items.join( "" )
+//      }).appendTo( ".restaurants" );
+//          
+//      });
+//        
+//        console.log(items.join);
+//        
+//
+//        
+//        
+//      $( "<ul/>", {
+//        "class": "my-new-list",
+//        html: items.join( "" )
+//      }).appendTo( ".restaurants" );
+//        
+//    });
+    
+    
+    
+    $(document).ready(function() { 
         
-        console.log(data);
-        
-        
-      var items = [];
-      $.each( data, function( key, val ) {
-        items.push( "<li id='" + key + "'>" + val + "</li>" );
-      });
-
-        
-        
-      $( "<ul/>", {
-        "class": "my-new-list",
-        html: items.join( "" )
-      }).appendTo( "body" );
+            $.ajax({
+                url: 'http://localhost:8888/RESTO/resto-wp/wp-content/themes/resto_theme/resto-liste-restaurants.json',
+                dataType: 'json',
+                success: function(json) {
+                    for(var key in json) {
+                        $('.restaurants').append('<div class="restaurant">'+ json[key]['name'] +'<br />'+ json[key]['address'] +'</div>');
+                    }
+                }
+            });    
+            return false;
+      
     });
 
-    
+
     
     
     /* /// HAUTEUR DE SECTIONS ///*/

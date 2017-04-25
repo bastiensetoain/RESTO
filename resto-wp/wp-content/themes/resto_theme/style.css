@@ -36,6 +36,19 @@ section{
     width: 50%;
 }
 
+.restaurants{
+    display: flex;
+    width: 80%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.restaurants .restaurant{
+    width: 50%;
+    text-align: center;
+}
+
 .featured{
     display: flex;
     width: 70%;
@@ -55,6 +68,12 @@ h2{
     display: flex;
     flex-flow: row wrap;
 }
+.article{
+    
+    background-color: aliceblue;
+    margin: .5em;
+    max-width: 300px;
+}
 .article img{
     width: 10em;
 }
@@ -64,41 +83,7 @@ h2{
 
 @media (max-width: 400px) {
     
-    main{
-        flex-flow: column wrap;
-        width: 80%;
-        margin: auto;
-        padding: 4em 0;
-    }
-    .head{
-        display: none;
-    }
-    .pre_page{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        padding: 0 0 4em;
-    }
-    .pre_page h1{
-        font-size: 2em;
-    }
-    .first_line{
-        flex-direction: column; 
-        align-items: center;
-        background: none;
-    }
-    .first_line .projet {
-        margin: 2em 0;
-    }
-    .second_line{
-        flex-direction: column;
-        align-items: center;
-        background: none;
-    }
-    .second_line .projet{
-        margin: 2em 0;    
-    }
+    
     
     
     .menu{
@@ -133,57 +118,9 @@ h2{
             margin: .6em;
             fill: inherit;
         }
-    .homeimg{
-        width: 100%;
-    }
-    header{
-        display: none;
-    }
-    .projet::before, .projet::after{
-        white-space: nowrap;
-    position: absolute;
-  bottom: 100%;
-    left: 50%;
-        top: inherit;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  pointer-events: none;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-    }
-    
-    .content_page {
-         margin: 0 ;
-    }
-    .content_page_text {
-        width: 100%;
-        white-space: inherit;
-        margin: 0;
-        column-count: inherit;
-        column-gap: inherit;
-    }
     
     
-    /*// ACTUALITES //*/
-    .cards{
-        padding: 0;
-        flex-flow: column;
-    }
-    .card{
-        width: 100%;
-        margin: 1em 0;
-    }
-    .single_content{
-        margin: 0;
-        flex-direction: column;
-        padding-left: 0;
-    }
-    .single_content p{
-        width: 100%;
-    }
-    .single_content *{
-        margin: 0;
-    }
+    
 }
 
 /*===============================
