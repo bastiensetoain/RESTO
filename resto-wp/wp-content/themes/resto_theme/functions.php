@@ -2,7 +2,7 @@
    
 
 function add_theme_scripts() {
-        wp_enqueue_style( 'colors-custom', get_template_directory_uri().'/style.css');
+        
     
         wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js' );
         wp_enqueue_script( 'jquery');
@@ -15,7 +15,7 @@ function add_theme_scripts() {
         wp_register_style( 'swipercss', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css' );
         wp_enqueue_style( 'swipercss');
     
-    
+    wp_enqueue_style( 'colors-custom', get_template_directory_uri().'/style.css');
     
         
     

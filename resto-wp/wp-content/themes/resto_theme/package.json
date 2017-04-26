@@ -10,6 +10,7 @@
     "gulp-csscomb": "latest",
     "gulp-cssbeautify": "latest",
     "gulp-sass": "latest",
+    "gulp-watch": "latest",
     "gulp-autoprefixer": "latest"
   }
 }

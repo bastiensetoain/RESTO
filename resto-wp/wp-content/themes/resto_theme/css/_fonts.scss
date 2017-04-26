@@ -1,0 +1,74 @@
+.font-s1{
+    font-size: 1em;
+}
+.font-s1_5{
+    font-size: 1.5em;
+}
+.font-s2{
+    font-size: 2em;
+}
+.font-s2_5{
+    font-size: 2.5em;
+}
+.font-s3{
+    font-size: 3em;
+}
+.font-s4{
+    font-size: 4em;
+}
+.font-s5{
+    font-size: 5em;
+}
+.font-s6{
+    font-size: 6em;
+}
+
+
+
+
+/*===============================
+=          FONTS
+===============================*/
+
+@font-face {
+    font-family: 'aleoregular';
+    src: url('fonts/Aleo-Regular-webfont.eot');
+    src: url('fonts/Aleo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Aleo-Regular-webfont.woff') format('woff'),
+         url('fonts/Aleo-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Aleo-Regular-webfont.svg#aleoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aleolight';
+    src: url('fonts/Aleo-Light-webfont.eot');
+    src: url('fonts/Aleo-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Aleo-Light-webfont.woff') format('woff'),
+         url('fonts/Aleo-Light-webfont.ttf') format('truetype'),
+         url('fonts/Aleo-Light-webfont.svg#aleolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'manonegra';
+    src: url('fonts/WCManoNegraBta-webfont.eot');
+    src: url('fonts/WCManoNegraBta-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/WCManoNegraBta-webfont.woff') format('woff'),
+         url('fonts/WCManoNegraBta-webfont.ttf') format('truetype'),
+         url('fonts/WCManoNegraBta-webfont.svg#wc_mano_negra_btaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+/*===============================
+=       End of FONTS
+===============================*/

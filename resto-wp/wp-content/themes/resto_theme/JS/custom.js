@@ -7,10 +7,8 @@ jQuery(document).ready(function($){
     
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        slidesPerView: 3,
+        slidesPerView: 4,
         paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
         spaceBetween: 30
     });
 
@@ -31,7 +29,42 @@ jQuery(document).ready(function($){
             return false;
       
     });
-
+    
+    
+    
+    //RATING STARS SYSTEM
+    
+    
+    $('.featured').each(function(){
+            
+        var note = $(this).find('.note').text();
+        
+        if(note == 2){
+            
+            $(this).find('.star-2 polygon').css('fill','#FFCF15');
+        }
+        if(note == 3){
+            
+            $(this).find('.star-2 polygon').css('fill','#FFCF15');
+            $(this).find('.star-3 polygon').css('fill','#FFCF15');
+        }
+        if(note == 4){
+            
+            $(this).find('.star-2 polygon').css('fill','#FFCF15');
+            $(this).find('.star-3 polygon').css('fill','#FFCF15');
+            $(this).find('.star-4 polygon').css('fill','#FFCF15');
+        }
+        if(note == 5){
+            
+            $(this).find('.star-2 polygon').css('fill','#FFCF15');
+            $(this).find('.star-3 polygon').css('fill','#FFCF15');
+            $(this).find('.star-4 polygon').css('fill','#FFCF15');
+            $(this).find('.star-5 polygon').css('fill','#FFCF15');
+        }
+        
+    });
+    
+    
 
 });//ready
 

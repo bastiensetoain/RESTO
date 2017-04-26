@@ -1,0 +1,218 @@
+/*------------------------------------------------------------------/*
+Theme Name: RESTOww
+Description: A Responsive WordPress Theme for restaurant.
+Author URI: http://bastiensetoain.fr/
+Author: Bastien Setoain
+Version: 1.0
+*/
+
+
+
+body{
+    margin: 0;
+    font-family: 'aleoregular';
+}
+p{
+    font-family: 'aleolight';
+}
+a{
+    text-decoration: none;
+}
+footer a{
+    color: #FAFAFA;
+}
+section{
+    margin: 10em 0;
+}
+header{
+    padding: 3em 0;
+}
+nav{
+    justify-content: space-around;
+}
+section h2{
+    margin-bottom: 3em;
+}
+h2 hr{
+    display: inline;
+    width: 20%;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    margin: 0 0 0 1em;
+}
+
+.dishes{
+    margin: 0 0 8em 0;
+}
+.dishes h2{
+    margin-top: 0;
+}
+.slider{
+    color: white;
+    border-bottom: 4px solid #f34949;
+}
+.slider h2{
+    font-family: 'manonegra';
+    font-size: 7em;
+    margin: 0;
+}
+.menu_title a{
+    color: white;
+    background-color: #f34949;
+    padding: .5em;
+    width: 110px;
+  height: 56px;
+  padding-top: 15px;
+  position: relative;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+
+
+.menu_title a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #FFFFFF;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+}
+
+.plats{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.plats .plat{
+    width: 50%;
+}
+
+.restaurants{
+    text-align: center;
+}
+.restaurants .restaurant{
+    width: 50%;
+    text-align: center;
+}
+
+.featured{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.featured_content{
+    width: 100%;
+    font-size: .7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.article{
+    background-color: aliceblue;
+    margin: .5em;
+    max-width: 300px;
+}
+.article img{
+    width: 10em;
+}
+.json *{
+    margin: .6em 0;
+}
+footer{
+    color: white;
+    background-color: #3b3b3b;
+    padding: 3em 0;
+}
+
+.swiper-container {
+        width: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        height: 35%;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-wrapper{
+    height: auto;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom: 10px;
+    right: 0;
+    top: 0;
+    left: auto;
+    width: auto;
+}
+
+
+.rating{
+    display: flex;
+}
+
+/*===============================
+=          MEDIA QUERIES
+===============================*/
+
+@media (max-width: 400px) {
+    
+    
+    
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    nav{
+        display: flex;
+        transform: translateX(-100%);
+        transition: .2s;
+    }
+    nav a{
+        transform: translateX(-100%);
+        transition: .2s;
+        color: #B1140D;
+    }
+    
+    [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav  {
+      transform: translateX(0);
+    }
+    .mobilenav{
+        visibility: visible;
+        display: flex;
+    }
+    
+    
+        .mobilenav .logo{
+            width: 3em;
+            margin: .6em;
+            fill: inherit;
+        }
+    
+    
+    
+}
+
+/*===============================
+=       End of MEDIA QUERIES
+===============================*/
