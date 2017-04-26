@@ -11,18 +11,8 @@
   
     
     <section class="blog">
-        <h2>Derniers Articles</h2>
-        <div class="articles">
-            {% for post in articles %}
-
-                   <div class="article">
-                    <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-                    <img src="{{ post.thumbnail }}">
-                    </div>
-
-
-            {% endfor %}
-        </div>
+        <h2 class="flex center-h flex-start">{{ post.title }} <hr></h2>
+        <p>{{ post.content }}</p>
     </section>
     
     </div>

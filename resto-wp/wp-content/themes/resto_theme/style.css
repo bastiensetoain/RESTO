@@ -22,7 +22,8 @@ section {
   margin: 10em 0; }
 
 header {
-  padding: 3em 0; }
+  padding: 3em 0;
+  box-shadow: 0px 2px 18px 0 rgba(0, 0, 0, 0.1); }
 
 nav {
   justify-content: space-around; }
@@ -103,12 +104,7 @@ h2 hr {
   justify-content: space-around; }
 
 .article {
-  background-color: aliceblue;
-  margin: .5em;
-  max-width: 300px; }
-
-.article img {
-  width: 10em; }
+  margin: .5em; }
 
 .json * {
   margin: .6em 0; }
@@ -152,37 +148,6 @@ footer {
 .rating {
   display: flex; }
 
-/*===============================
-=          MEDIA QUERIES
-===============================*/
-@media (max-width: 400px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0; }
-  nav {
-    display: flex;
-    transform: translateX(-100%);
-    transition: .2s; }
-  nav a {
-    transform: translateX(-100%);
-    transition: .2s;
-    color: #B1140D; }
-  [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav {
-    transform: translateX(0); }
-  .mobilenav {
-    visibility: visible;
-    display: flex; }
-  .mobilenav .logo {
-    width: 3em;
-    margin: .6em;
-    fill: inherit; } }
-
-/*===============================
-=       End of MEDIA QUERIES
-===============================*/
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -264,6 +229,9 @@ footer {
 
 .w20 {
   width: 20%; }
+
+.w23 {
+  width: 23%; }
 
 .w10 {
   width: 10%; }
@@ -438,6 +406,9 @@ a {
 .font-s6 {
   font-size: 6em; }
 
+.center-text {
+  text-align: center; }
+
 /*===============================
 =          FONTS
 ===============================*/
@@ -464,4 +435,38 @@ a {
 
 /*===============================
 =       End of FONTS
+===============================*/
+/*===============================
+=          MEDIA QUERIES
+===============================*/
+@media (max-width: 400px) {
+  .articles {
+    flex-direction: column; }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0; }
+  header {
+    display: grid; }
+  nav {
+    display: flex;
+    transform: translateX(-100%);
+    transition: .2s; }
+  nav a {
+    transform: translateX(-100%);
+    transition: .2s;
+    color: #B1140D; }
+  [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav {
+    transform: translateX(0); }
+  .mobilenav {
+    visibility: visible;
+    display: flex; }
+  .mobilenav .logo {
+    width: 3em;
+    margin: .6em;
+    fill: inherit; } }
+
+/*===============================
+=       End of MEDIA QUERIES
 ===============================*/

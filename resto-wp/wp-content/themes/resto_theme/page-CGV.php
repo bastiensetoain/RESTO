@@ -35,7 +35,9 @@ $plats_posts_featured = array(
 
 $context['featured'] = Timber::get_posts($plats_posts_featured);
 
+$post = new TimberPost();
 
+$context['post'] = $post;
 
 //var_dump($context);
 

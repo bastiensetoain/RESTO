@@ -1,16 +1,41 @@
 jQuery(document).ready(function($){
     
-    console.log('custom');
+    
+    var width = $('body').width();
+    
+    console.log(width );
+    
     
     
     //INITIALIZE SWIPER PLUGIN
     
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        slidesPerView: 4,
-        paginationClickable: true,
-        spaceBetween: 30
-    });
+    
+    if ($('body').width() > 410){
+        
+        console.log('biigwidth');
+        
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 4,
+            paginationClickable: true,
+            spaceBetween: 30
+        });
+    };
+    if ($('body').width() < 410){
+        
+        console.log('smallwidth');
+        
+        
+        
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 2,
+            paginationClickable: true,
+            spaceBetween: 30
+        });
+    }
+    
+    
 
     
     // DISPLAY JSON RESTAURANT FILE

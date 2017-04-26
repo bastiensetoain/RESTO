@@ -15,7 +15,7 @@
   
   
    <section class="dishes">
-        <h2 class="menu_title"><a href="{{ TimberPost(6).link }}">The Menu</a></h2>
+        <h2 class="menu_title center-text"><a href="{{ TimberPost(6).link }}">{{ TimberPost(6).title }}</a></h2>
         
         
         
@@ -80,17 +80,19 @@
     
     <section class="blog">
         <h2 class="flex center-h flex-start">Derniers Articles <hr></h2>
-        <div class="flex row wrap">
+        <div class="flex d-row wrap center articles">
             {% for post in articles %}
 
-                   <div class="article">
+                   <div class="article flex column center center-h w23">
                     <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-                    <img src="{{ post.thumbnail }}">
+                    <div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
+                                </div>
+                    <p>{{ post.post_excerpt }}</p>
                     </div>
 
 
             {% endfor %}
-            <a href="{{ TimberPost(72).link }}">VOIR PLUS</a>
+            <div class="w100 m-3 center-text"><a href="{{ TimberPost(72).link }}">VOIR PLUS</a></div>
         </div>
     </section>
     
@@ -98,7 +100,9 @@
         <h2 class="flex center-h flex-start">Restaurants <hr></h2>
         <div class="restaurants">
            <div class="json flex row wrap center center-h"></div>
-            <a href="{{ TimberPost(8).link }}">VOIR PLUS</a>
+           <div class="more m-3">
+            <a class="m-3" href="{{ TimberPost(8).link }}">VOIR PLUS</a>
+            </div>
         </div>
     </section>
     

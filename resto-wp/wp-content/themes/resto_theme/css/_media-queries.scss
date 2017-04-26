@@ -1,0 +1,51 @@
+/*===============================
+=          MEDIA QUERIES
+===============================*/
+
+@media (max-width: 400px) {
+    
+    .articles{
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    header{
+        display: grid;
+    }
+    nav{
+        display: flex;
+        transform: translateX(-100%);
+        transition: .2s;
+    }
+    nav a{
+        transform: translateX(-100%);
+        transition: .2s;
+        color: #B1140D;
+    }
+    
+    [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav  {
+      transform: translateX(0);
+    }
+    .mobilenav{
+        visibility: visible;
+        display: flex;
+    }
+    
+    
+        .mobilenav .logo{
+            width: 3em;
+            margin: .6em;
+            fill: inherit;
+        }
+    
+    
+    
+}
+
+/*===============================
+=       End of MEDIA QUERIES
+===============================*/
