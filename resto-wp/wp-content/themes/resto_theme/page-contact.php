@@ -9,5 +9,3 @@ $post = new TimberPost();
 $context['post'] = $post;
 
 Timber::render('page-contact.twig', $context);
-
-//var_dump($context['post']);

@@ -14,13 +14,14 @@
         <h2 class="flex center-h flex-start">{{ post.title }} <hr></h2>
         <div class="plats">
             {% for post in plats %}
-                    <div class="plat">
-                        <h3>{{ post.title }}</h3>
-
-                        <p>{{ post.content }}</p>
+                    <div class="w50 flex font-s_8 around center-h">
+                       <div>
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.content }}</p>
+                        </div>
+                        <hr>
                         <p>{{post.get_field('prix')}} €</p>
                     </div>
-
             {% endfor %}
         </div>
     </section>

@@ -62,6 +62,8 @@ function add_to_context($data){
     
     
     
+    //Ajoute le logo dans un contexte globadisponible ainsi sur toutes le spages
+    
     $custom_logo_id = get_theme_mod( 'custom_logo' );
     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     

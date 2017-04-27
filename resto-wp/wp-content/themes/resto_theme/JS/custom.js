@@ -7,7 +7,8 @@ jQuery(document).ready(function($){
     
     
     
-    //INITIALIZE SWIPER PLUGIN
+    //Initialisation du plugin swiper selon la largeur de l'écran,
+    //si l'écran est supérieur à 410px de large le slider présente 4 plats sinon il n'en présente que 2.
     
     
     if ($('body').width() > 410){
@@ -39,6 +40,7 @@ jQuery(document).ready(function($){
 
     
     // DISPLAY JSON RESTAURANT FILE
+    // on récupere les informations du fichiers json et on injecte celles-ci dans la div "json" de la page.
     
     $(document).ready(function() { 
         
@@ -58,6 +60,8 @@ jQuery(document).ready(function($){
     
     
     //RATING STARS SYSTEM
+    //pour chaque répétition de la div "featured" on récupère la valeure de 
+    //"note" et on la compare afin de colorier le nombre d'étoiles correspondant.
     
     
     $('.featured').each(function(){

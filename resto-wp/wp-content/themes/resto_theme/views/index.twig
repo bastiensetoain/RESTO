@@ -1,4 +1,10 @@
+{# On utilise le fichier base.twig #}
+
+
 {% extends'base.twig' %}
+
+
+{# On insère dans le block le contenu spécfique à la page index #}
 
 
 {% block content %}
@@ -18,13 +24,16 @@
         <h2 class="menu_title center-text"><a href="{{ TimberPost(6).link }}">{{ TimberPost(6).title }}</a></h2>
         
         
-        
+<!-- Boucle afichant les 8 plats -->
+       
         <div class="flex row wrap center center-h">
             {% for post in plats %}
-                    <div class="w50">
-                        <h3>{{ post.title }}</h3>
-
-                        <p>{{ post.content }}</p>
+                    <div class="w50 flex font-s_8 around center-h">
+                       <div>
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.content }}</p>
+                        </div>
+                        <hr>
                         <p>{{post.get_field('prix')}} €</p>
                     </div>
 
@@ -39,7 +48,10 @@
         <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-                
+               
+               
+                <!-- Boucle afichant dans le swiper slide les plats mis en avant -->
+                   
                     {% for post in featured %}
                             <div class="swiper-slide featured flex column center center-h">
                                 <div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
@@ -81,6 +93,10 @@
     <section class="blog">
         <h2 class="flex center-h flex-start">Derniers Articles <hr></h2>
         <div class="flex d-row wrap center articles">
+           
+           
+           <!-- Boucle afichant les articles de blog -->
+           
             {% for post in articles %}
 
                    <div class="article flex column center center-h w23">
@@ -98,6 +114,10 @@
     
     <section class="restos">
         <h2 class="flex center-h flex-start">Restaurants <hr></h2>
+        
+        
+        <!-- Div accueillant les restaurants du fichier json -->
+        
         <div class="restaurants">
            <div class="json flex row wrap center center-h"></div>
            <div class="more m-3">

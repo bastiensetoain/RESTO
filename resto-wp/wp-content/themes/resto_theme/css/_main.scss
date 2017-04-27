@@ -34,6 +34,14 @@ nav{
 section h2{
     margin-bottom: 3em;
 }
+hr{
+    display: inline;
+    width: 20%;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    margin: 0 0 0 1em;
+    height: 0;
+}
 h2 hr{
     display: inline;
     width: 20%;
