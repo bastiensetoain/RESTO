@@ -12,7 +12,7 @@
     
     <section class="blog">
         <h2 class="flex center-h flex-start">{{ post.title }} <hr></h2>
-        <div class="plats">
+        <div class="flex row wrap center center-h">
             {% for post in plats %}
                     <div class="plat w45 flex font-s_8 between center-h pl-1 pr-1">
                        <div>
@@ -20,8 +20,9 @@
                             <p>{{ post.content }}</p>
                         </div>
                         <hr>
-                        <p>{{post.get_field('prix')}} €</p>
+                        <p class="prix">{{post.get_field('prix')}} €</p>
                     </div>
+
             {% endfor %}
         </div>
     </section>

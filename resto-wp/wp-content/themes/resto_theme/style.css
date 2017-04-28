@@ -466,39 +466,38 @@ a {
 =          MEDIA QUERIES
 ===============================*/
 @media screen and (max-device-width: 500px) {
-  .articles {
+  header {
     flex-direction: column; }
-  .article {
-    width: 100%;
-    margin: 0; }
+  h1 {
+    font-size: 2em; }
   .menu {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0; }
-  .more {
-    margin: 3em 0 0; }
   .nav {
     width: 95%;
     margin: 2em 0 0; }
+  .articles {
+    flex-direction: column; }
+  .article {
+    width: 100%;
+    margin: 0; }
+  .more {
+    margin: 3em 0 0; }
   .plat {
     width: 100%; }
-  .slider h2 {
-    font-size: 4em; }
-  header {
-    flex-direction: column; }
-  [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav {
-    transform: translateX(0); }
-  .mobilenav {
-    visibility: visible;
-    display: flex; }
-  .mobilenav .logo {
-    width: 3em;
-    margin: .6em;
-    fill: inherit; }
+  .plat hr {
+    display: none; }
+  .restaurants .restaurant {
+    width: 100%; }
   .swiper-slide {
     text-align: center;
-    height: 40%; }
+    height: 50%; }
+  .slider h2 {
+    font-size: 4em; }
+  .prix {
+    white-space: nowrap; }
   footer {
     flex-direction: column; } }
 

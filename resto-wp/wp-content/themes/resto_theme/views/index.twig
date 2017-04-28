@@ -34,7 +34,7 @@
                             <p>{{ post.content }}</p>
                         </div>
                         <hr>
-                        <p>{{post.get_field('prix')}} €</p>
+                        <p class="prix">{{post.get_field('prix')}} €</p>
                     </div>
 
             {% endfor %}
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="featured_content" data-price="{{post.get_field('note')}}">
                                     <h3>{{ post.title }}</h3>
-                                    <p>{{post.get_field('prix')}} €</p>
+                                    <p class="prix">{{post.get_field('prix')}} €</p>
                                     <p style="opacity:0;" class="note">{{post.get_field('note')}} </p>
                                     
                                 </div>
@@ -101,7 +101,7 @@
 
                    <div class="article flex column center center-h w23">
                     <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-                    <a href="{{ post.link }}"><div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
+                    <a class="img w100 h10em " href="{{ post.link }}"><div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
                                 </div></a>
                     <p>{{ post.post_excerpt }}..</p>
                     </div>
