@@ -12,19 +12,18 @@
     
     <section class="blog">
         <h2  class="flex center-h flex-start">{{ post.title }} <hr></h2>
-        <div class="flex row wrap center">
+        <div class="flex row wrap center articles">
             {% for post in articles %}
 
                    <div class="article flex column center center-h w23">
                     <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
                     <div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
                                 </div>
-                    <p>{{ post.post_excerpt }}</p>
+                    <p>{{ post.post_excerpt }}..</p>
                     </div>
 
 
             {% endfor %}
-            <div class="w100"><a href="{{ TimberPost(72).link }}">VOIR PLUS</a></div>
         </div>
     </section>
     

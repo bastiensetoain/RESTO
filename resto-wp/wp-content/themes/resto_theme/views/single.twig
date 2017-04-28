@@ -6,18 +6,22 @@
 
 <main>
   <div class="w80 m-auto">
+   <section class="single-article">
     <h1 class="font-s5">{{ post.title }}</h1>
 
 
     <p>{{ post.content }}</p>
     
+<!--
     <h4>Commentaires:</h4>
 	{% for comment in post.comments %}
 		<div class="comment-{{comment.ID}} comment-order-{{loop.index}}">
-			<p>{{comment.author.name}} à écrit:</p>
+			<p><b>{{comment.author.name}}</b> <i>à écrit:</i></p>
 			<p>{{comment.content}}</p>
 		</div>
 	{% endfor %}
+-->
+  </section>
    </div>
     
 </main>

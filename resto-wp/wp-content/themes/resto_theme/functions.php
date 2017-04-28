@@ -33,10 +33,20 @@ add_post_type_support( post, excerpt );
 
 // add menu
 
+
+
+
 function register_my_menu() {
-  register_nav_menu('header-menu',__( 'Header Menu' ));
+  register_nav_menu('menu-header',__( 'menu-header' ));
+  register_nav_menu('menu-footer',__( 'menu-footer' ));
 }
+
 add_action( 'init', 'register_my_menu' );
+
+
+
+
+
 
 function theme_prefix_setup() {
     add_theme_support( 'custom-logo' );
@@ -45,24 +55,19 @@ add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
-    /*set_post_thumbnail_size( 350, , true ); // default Post Thumbnail dimensions (cropped)
-
-    // additional image sizes
-    // delete the next line if you do not need additional image sizes
-    add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)*/
 }
 
-add_filter('timber_context', 'add_to_context');
+
+//Ajoute le menu et le logo dans un contexte global disponible ainsi sur toutes le spages
+
 function add_to_context($data){
-	/* So here you are adding data to Timber's context object, i.e... */
-	$data['foo'] = 'I am some other typical value set in your functions.php file, unrelated to the menu';
+
 
 	/* Now, in similar fashion, you add a Timber menu and send it along to the context. */
-	$data['menu'] = new TimberMenu(); // This is where you can also send a WordPress menu slug or ID
-    
-    
-    
-    //Ajoute le logo dans un contexte globadisponible ainsi sur toutes le spages
+	$data['headermenu'] = new TimberMenu('menu-header'); // This is where you can also send a WordPress menu slug or ID    
+
+    $data['footermenu'] = new TimberMenu('menu-footer'); // This is where you can also send a WordPress menu slug or ID    
+
     
     $custom_logo_id = get_theme_mod( 'custom_logo' );
     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -71,6 +76,7 @@ function add_to_context($data){
 	return $data;
 }
 
+add_filter('timber_context', 'add_to_context');
 
 
 

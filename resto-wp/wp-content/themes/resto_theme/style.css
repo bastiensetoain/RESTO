@@ -156,6 +156,9 @@ footer {
 .rating {
   display: flex; }
 
+.single-article img {
+  width: 100%; }
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,6 +225,9 @@ footer {
 
 .w50 {
   width: 50%; }
+
+.w45 {
+  width: 45%; }
 
 .w40 {
   width: 40%; }
@@ -333,6 +339,12 @@ footer {
 
 .p-3 {
   padding: 3em; }
+
+.pl-1 {
+  padding-left: 1em; }
+
+.pr-1 {
+  padding-right: 1em; }
 
 .center-text {
   text-align: center; }
@@ -453,24 +465,25 @@ a {
 /*===============================
 =          MEDIA QUERIES
 ===============================*/
-@media (max-width: 400px) {
+@media screen and (max-device-width: 500px) {
   .articles {
     flex-direction: column; }
+  .article {
+    width: 100%;
+    margin: 0; }
   .menu {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0; }
+  .more {
+    margin: 3em 0 0; }
+  .nav {
+    width: 95%; }
+  .plat {
+    width: 100%; }
   header {
-    display: grid; }
-  nav {
-    display: flex;
-    transform: translateX(-100%);
-    transition: .2s; }
-  nav a {
-    transform: translateX(-100%);
-    transition: .2s;
-    color: #B1140D; }
+    flex-direction: column; }
   [id="noidea"]:checked ~ nav a, [id="noidea"]:checked ~ nav {
     transform: translateX(0); }
   .mobilenav {
@@ -479,7 +492,10 @@ a {
   .mobilenav .logo {
     width: 3em;
     margin: .6em;
-    fill: inherit; } }
+    fill: inherit; }
+  .swiper-slide {
+    text-align: center;
+    height: 40%; } }
 
 /*===============================
 =       End of MEDIA QUERIES

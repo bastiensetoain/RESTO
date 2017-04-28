@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
     //si l'écran est supérieur à 410px de large le slider présente 4 plats sinon il n'en présente que 2.
     
     
-    if ($('body').width() > 410){
+    if ($('body').width() > 500){
         
         console.log('biigwidth');
         
@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
             spaceBetween: 30
         });
     };
-    if ($('body').width() < 410){
+    if ($('body').width() < 500){
         
         console.log('smallwidth');
         
@@ -49,7 +49,7 @@ jQuery(document).ready(function($){
                 dataType: 'json',
                 success: function(json) {
                     for(var key in json) {
-                        $('.json').append('<div class="restaurant">'+ json[key]['name'] +'<br />'+ json[key]['address'] +'</div>');
+                        $('.json').append('<div class="restaurant"> <h3>'+ json[key]['name'] +' </h3><br /><p>'+ json[key]['address'] +'</p></div>');
                     }
                 }
             });    

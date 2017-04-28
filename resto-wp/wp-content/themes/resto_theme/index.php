@@ -27,7 +27,8 @@ $blog_posts = array(
 $context['articles'] = Timber::get_posts($blog_posts);
 
 
-//On ajoute uniquement les plats mis en avant au context sous le nom "featured"
+//On ajoute uniquement les plats mis en avant au context sous le nom "featured".
+//On récupère uniquement les plats ayants le champs ACF "featured" coché avec "key" et "value".
 
 
 $plats_posts_featured = array(
