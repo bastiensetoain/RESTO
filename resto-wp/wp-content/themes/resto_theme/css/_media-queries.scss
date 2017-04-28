@@ -22,9 +22,13 @@
     }
     .nav{
         width: 95%;
+        margin: 2em 0 0;
     }
     .plat{
         width: 100%;
+    }
+    .slider h2 {
+        font-size: 4em;
     }
     header{
         flex-direction: column;
@@ -48,6 +52,9 @@
     .swiper-slide {
         text-align: center;
         height: 40%;
+    }
+    footer{
+        flex-direction: column;
     }
     
 }

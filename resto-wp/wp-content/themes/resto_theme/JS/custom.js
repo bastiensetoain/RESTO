@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
     //si l'écran est supérieur à 410px de large le slider présente 4 plats sinon il n'en présente que 2.
     
     
-    if ($('body').width() > 500){
+    if (window.matchMedia("(min-width: 500px)").matches){
         
         console.log('biigwidth');
         
@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
             spaceBetween: 30
         });
     };
-    if ($('body').width() < 500){
+    if (window.matchMedia("(max-width: 500px)").matches){
         
         console.log('smallwidth');
         
